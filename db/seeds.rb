@@ -8,10 +8,11 @@
 
 puts "seeding data"
 
-20.times do
+10.times do
   Article.create(
-    title: Faker::Hipster.sentence,
-    content: Faker::Hipster.paragraph
+    title: Faker::Food.dish,
+    content: Faker::Food.description,
+    body: Cicero.words(rand(150..400))
   )
 end
 
